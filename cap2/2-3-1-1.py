@@ -7,7 +7,7 @@ class Add:
     self.left = left
     self.right = right
 
-class Multiply(Struct):
+class Multiply:
   def __init__(self, left, right):
     self.left = left
     self.right = right
