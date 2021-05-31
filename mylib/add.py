@@ -6,11 +6,11 @@ class Add:
     self.right = right
   def is_reducible(self):
     return True
-  def reduce(self):
+  def reduce(self, environment):
     if self.left.is_reducible():
-      return Add(self.left.reduce(), self.right)
+      return Add(self.left.reduce(environment), self.right)
     elif self.right.is_reducible():
-      return Add(self.left, self.right.reduce())
+      return Add(self.left, self.right.reduce(environment))
     else:
       return Number(self.left.value + self.right.value)
   def __str__(self):

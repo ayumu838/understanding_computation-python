@@ -8,11 +8,11 @@ class LessThan:
     return '{} < {}'.format(self.left, self.right)
   def is_reducible(self):
     return True
-  def reduce(self):
+  def reduce(self, environment):
     if self.left.is_reducible():
-      return LessThan(self.left.reduce(), self.right)
+      return LessThan(self.left.reduce(environment), self.right)
     elif self.right.is_reducible():
-      return LessThan(self.left, self.right.reduce())
+      return LessThan(self.left, self.right.reduce(environment))
     else:
       return Boolean(self.left.value < self.right.value)
   def __str__(self):

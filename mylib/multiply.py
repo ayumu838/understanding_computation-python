@@ -6,11 +6,11 @@ class Multiply:
     self.right = right
   def is_reducible(self):
     return True
-  def reduce(self):
+  def reduce(self, environment):
     if self.left.is_reducible():
-      return Multiply(self.left.reduce(), self.right)
+      return Multiply(self.left.reduce(environment), self.right)
     elif self.right.is_reducible():
-      return Multiply(self.left, self.right.reduce())
+      return Multiply(self.left, self.right.reduce(environment))
     else:
       return Number(self.left.value * self.right.value)
   def __str__(self):
