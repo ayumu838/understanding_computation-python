@@ -1,4 +1,4 @@
-from mylib import *
+from . import *
 
 class Multiply:
   def __init__(self, left, right):

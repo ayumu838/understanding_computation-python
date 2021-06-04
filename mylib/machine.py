@@ -1,4 +1,4 @@
-from mylib import *
+from . import *
 
 class Machine:
   def __init__(self, expression, environment):

@@ -1,4 +1,4 @@
-from mylib import *
+from . import *
 
 class Variable:
   def __init__(self, name):

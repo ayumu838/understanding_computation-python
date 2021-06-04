@@ -1,4 +1,4 @@
-from mylib import *
+from . import *
 
 class Boolean:
   def __init__(self, value):
