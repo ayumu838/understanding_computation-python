@@ -13,6 +13,8 @@ class Add:
       return Add(self.left, self.right.reduce(environment))
     else:
       return Number(self.left.value + self.right.value)
+  def evaluate(self, environment):
+    return Number(self.left.evaluate(environment).value + self.right.evaluate(environment).value)
   def __str__(self):
     return '{} + {}'.format(self.left, self.right)
   def __repr__(self):

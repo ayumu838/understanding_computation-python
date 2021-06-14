@@ -15,6 +15,8 @@ class LessThan:
       return LessThan(self.left, self.right.reduce(environment))
     else:
       return Boolean(self.left.value < self.right.value)
+  def evaluate(self, environment):
+    return Boolean(self.left.evaluate(environment).value < self.right.evaluate(environment).value)
   def __str__(self):
     return self.to_s()
   def __repr__(self):

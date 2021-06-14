@@ -5,3 +5,8 @@ from .machine import Machine
 from .boolean import Boolean
 from .less_than import LessThan
 from .variable import Variable
+from .do_nothing import DoNothing
+from .assign import Assign
+from .mif import If
+from .sequence import Sequence
+from .mwhile import While

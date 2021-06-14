@@ -3,6 +3,8 @@ from . import *
 class Variable:
   def __init__(self, name):
     self.name = name
+  def evaluate(self, environment):
+    return environment[self.name]
   def to_s(self):
     return '{}'.format(self.name)
   def is_reducible(self):

@@ -2,6 +2,8 @@ from mylib import *
 class Number:
   def __init__(self, value):
     self.value = value
+  def evaluate(self, environment):
+    return self
   def to_s(self):
     return '{}'.format(self.value)
   def is_reducible(self):
